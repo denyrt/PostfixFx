@@ -5,7 +5,7 @@ import mathematic.UnaryToken;
 
 import java.util.function.UnaryOperator;
 
-public final class SimpleUnaryToken<T> implements UnaryToken<T> {
+public final class SimpleUnaryToken<T> extends UnaryToken<T> {
 
     private final String key;
     private final int priority;

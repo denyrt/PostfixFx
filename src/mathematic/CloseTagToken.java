@@ -1,6 +1,6 @@
 package mathematic;
 
-public interface CloseTagToken<T> extends OperationToken<T> {
+public abstract class CloseTagToken<T> extends OperationToken<T> {
 
-    OpenTagToken<T> getCloseTag();
+    public abstract OpenTagToken<T> getOpenTag();
 }

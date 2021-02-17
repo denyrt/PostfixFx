@@ -1,8 +1,13 @@
 package mathematic;
 
-public interface OperationToken<T> extends Token<T> {
+public abstract class OperationToken<T> extends Token<T> {
 
-    String getKey();
+    public abstract String getKey();
 
-    int getPriority();
+    public abstract int getPriority();
+
+    @Override
+    public String toString() {
+        return getKey();
+    }
 }

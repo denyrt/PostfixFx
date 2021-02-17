@@ -5,7 +5,7 @@ import mathematic.OperandToken;
 
 import java.util.function.BinaryOperator;
 
-public final class SimpleBinaryToken<T> implements BinaryToken<T> {
+public final class SimpleBinaryToken<T> extends BinaryToken<T> {
 
     private final String key;
     private final int priority;

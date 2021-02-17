@@ -3,24 +3,34 @@ package mathematic.algebra;
 import mathematic.CloseTagToken;
 import mathematic.OpenTagToken;
 
-public final class SimpleOpenTagToken<T> implements OpenTagToken<T> {
+public final class SimpleOpenTagToken<T> extends OpenTagToken<T> {
 
-    private SimpleOpenTagToken() {
+    private final String key;
+    private final int priority;
 
+    private CloseTagToken<T> closeTagToken;
+
+    public SimpleOpenTagToken(String key, int priority) {
+        this.key = key;
+        this.priority = priority;
+    }
+
+    public void setCloseTag(CloseTagToken<T> closeTagToken) {
+        this.closeTagToken = closeTagToken;
     }
 
     @Override
     public CloseTagToken<T> getCloseTag() {
-        return null;
+        return this.closeTagToken;
     }
 
     @Override
     public String getKey() {
-        return null;
+        return this.key;
     }
 
     @Override
     public int getPriority() {
-        return 0;
+        return this.priority;
     }
 }

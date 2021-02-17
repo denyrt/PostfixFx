@@ -1,6 +1,6 @@
 package mathematic;
 
-public interface UnaryToken<T> extends OperationToken<T> {
+public abstract class UnaryToken<T> extends OperationToken<T> {
 
-    OperandToken<T> calculate(OperandToken<T> value);
+    public abstract OperandToken<T> calculate(OperandToken<T> value);
 }

@@ -1,6 +1,11 @@
 package mathematic;
 
-public interface OperandToken<T> extends Token<T> {
+public abstract class OperandToken<T> extends Token<T> {
 
-    T getValue();
+    public abstract T getValue();
+
+    @Override
+    public String toString() {
+        return getValue().toString();
+    }
 }

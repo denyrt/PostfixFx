@@ -2,7 +2,7 @@ package mathematic.algebra;
 
 import mathematic.OperandToken;
 
-public final class SimpleOperandToken<T> implements OperandToken<T> {
+public final class SimpleOperandToken<T> extends OperandToken<T> {
 
     private final T value;
 
@@ -12,6 +12,6 @@ public final class SimpleOperandToken<T> implements OperandToken<T> {
 
     @Override
     public T getValue() {
-        return null;
+        return this.value;
     }
 }
