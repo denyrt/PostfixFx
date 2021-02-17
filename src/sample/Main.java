@@ -5,6 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import mathematic.algebra.ReservedOperations;
+import syntax.SimpleOperationTokenComparator;
+
+import java.util.Arrays;
 
 public class Main extends Application {
 
