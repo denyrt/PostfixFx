@@ -37,7 +37,7 @@ public final class PolishNotation {
                 var currentOperation = (OperationToken) token;
 
                 while (tmpOperations.size() > 0) {
-                    var operation = tmpOperations.pop();
+                    var operation = tmpOperations.poll();
 
                     if (operation.getPriority() >= currentOperation.getPriority()) {
                         postfix.addLast(operation);
