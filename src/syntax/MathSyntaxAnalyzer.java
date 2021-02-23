@@ -63,7 +63,7 @@ public final class MathSyntaxAnalyzer {
                                 .filter(op -> op.getKey() == operation.getKey() && op instanceof UnaryToken)
                                 .findFirst();
 
-                        if (sameUnary != null)
+                        if (!sameUnary.isEmpty())
                             token = sameUnary.get();
                     }
 
